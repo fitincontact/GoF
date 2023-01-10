@@ -9,7 +9,7 @@ import com.fitin.patterns.c.AbstractFactory.models.table.VictorianTable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class FurnitureServiceTest {
+public class FurnitureFactoryMethodServiceTest {
     final FurnitureService service = new FurnitureService();
 
     @Test

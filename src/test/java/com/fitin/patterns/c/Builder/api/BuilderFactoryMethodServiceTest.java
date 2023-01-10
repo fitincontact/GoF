@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BuilderServiceTest {
+public class BuilderFactoryMethodServiceTest {
     BuilderService service = new BuilderService();
 
     @Test
