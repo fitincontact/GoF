@@ -1,7 +1,6 @@
 package com.fitin.patterns.c.Builder.models.arable;
 
 import com.fitin.patterns.c.Builder.builders.BuilderObject;
-import com.fitin.patterns.c.Builder.models.Scarecrow;
 
 import java.util.ArrayList;
 import java.util.List;
