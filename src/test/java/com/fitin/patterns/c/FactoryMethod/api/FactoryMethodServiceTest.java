@@ -1,7 +1,8 @@
 package com.fitin.patterns.c.FactoryMethod.api;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FactoryMethodServiceTest {
     FactoryMethodService service = new FactoryMethodService();
@@ -10,13 +11,13 @@ public class FactoryMethodServiceTest {
     void win() {
         var dialog = service.initialize(ClientRequest.WIN);
         var button = dialog.render();
-        Assertions.assertEquals(button.getNameButton(), "WindowsButton");
+        assertEquals(button.getNameButton(), "WindowsButton");
     }
 
     @Test
     void web() {
         var dialog = service.initialize(ClientRequest.WEB);
         var button = dialog.render();
-        Assertions.assertEquals(button.getNameButton(), "HTMLButton");
+        assertEquals(button.getNameButton(), "HTMLButton");
     }
 }
