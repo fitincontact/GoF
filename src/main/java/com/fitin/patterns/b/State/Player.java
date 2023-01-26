@@ -11,21 +11,16 @@ public class Player {
     }
 
     public String exec(PlayerState state) {
-        switch (state) {
+        return switch (state) {
             case NEXT -> {
                 current = current == size ? 0 : current + 1;
-                return album.getSongs().get(current);
+                yield album.getSongs().get(current);
             }
             case PREVIOUS -> {
                 current = current == 0 ? size - 1 : current - 1;
-                return album.getSongs().get(current);
+                yield album.getSongs().get(current);
             }
-            case PLAY -> {
-                return album.getSongs().get(current) + ": la-la-la!";
-            }
-            default -> {
-                return "";
-            }
-        }
+            case PLAY -> album.getSongs().get(current) + ": la-la-la!";
+        };
     }
 }
