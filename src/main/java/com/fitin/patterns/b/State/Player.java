@@ -13,7 +13,7 @@ public class Player {
     public String exec(PlayerState state) {
         return switch (state) {
             case NEXT -> {
-                current = current == size ? 0 : current + 1;
+                current = current == size - 1 ? 0 : current + 1;
                 yield album.getSongs().get(current);
             }
             case PREVIOUS -> {
